@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">GitHub User Finder</string>
+    <string name="search_user">Search user here ...</string>
+    <string name="greetings">Hello. Want to search someone?</string>
+    <string name="empty_search">Please enter username</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="toolbar_detail">User Detail</string>
+    <string name="github_desc">Where the world builds software</string>
 </resources>
