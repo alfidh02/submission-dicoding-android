@@ -14,19 +14,19 @@ class UserDetailViewModel : ViewModel() {
 
     fun setUserDetail(username: String) {
         ApiClient.apiRequest
-            .getDetailUser(username)
-            .enqueue(object : retrofit2.Callback<UserDetail> {
-                override fun onResponse(call: Call<UserDetail>, response: Response<UserDetail>) {
-                    if (response.isSuccessful) {
-                        userDetail.postValue(response.body())
+                .getDetailUser(username)
+                .enqueue(object : retrofit2.Callback<UserDetail> {
+                    override fun onResponse(call: Call<UserDetail>, response: Response<UserDetail>) {
+                        if (response.isSuccessful) {
+                            userDetail.postValue(response.body())
+                        }
                     }
-                }
 
-                override fun onFailure(call: Call<UserDetail>, error: Throwable) {
-                    Log.d("Failure", error.message.toString())
-                }
+                    override fun onFailure(call: Call<UserDetail>, error: Throwable) {
+                        Log.d("Failure", error.message.toString())
+                    }
 
-            })
+                })
     }
 
     fun getUserDetail(): LiveData<UserDetail> = userDetail

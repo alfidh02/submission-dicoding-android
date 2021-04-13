@@ -10,9 +10,19 @@ import com.project.submissiondicodinggithub2.model.User
 class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     private var onItemClickCallback: OnItemClickCallback? = null
 
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        val view = ItemUserBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent, false
+        )
+        return UserViewHolder(view)
     }
+
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        holder.bind(list[position])
+    }
+
+    override fun getItemCount(): Int = list.size
 
     private val list = ArrayList<User>()
     fun setList(users: ArrayList<User>) {
@@ -39,21 +49,12 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        val view = ItemUserBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent, false
-        )
-        return UserViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        holder.bind(list[position])
-    }
-
-    override fun getItemCount(): Int = list.size
-
     interface OnItemClickCallback {
         fun onItemClicked(data: User)
     }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
 }

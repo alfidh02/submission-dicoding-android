@@ -1,7 +1,6 @@
 package com.project.submissiondicodinggithub2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.view.KeyEvent
@@ -9,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.submissiondicodinggithub2.adapter.UserAdapter
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 return@setOnKeyListener false
             }
+
         }
 
         userAdapter.setOnItemClickCallback(object : UserAdapter.OnItemClickCallback {

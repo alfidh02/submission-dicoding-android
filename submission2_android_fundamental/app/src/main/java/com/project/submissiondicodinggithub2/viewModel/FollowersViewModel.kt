@@ -15,21 +15,21 @@ class FollowersViewModel : ViewModel() {
 
     fun setListFollowers(username: String) {
         ApiClient.apiRequest
-            .getFollowersUser(username)
-            .enqueue(object : Callback<ArrayList<User>>{
-                override fun onResponse(
-                    call: Call<ArrayList<User>>,
-                    response: Response<ArrayList<User>>
-                ) {
-                    if (response.isSuccessful) {
-                        listFollowers.postValue(response.body())
+                .getFollowersUser(username)
+                .enqueue(object : Callback<ArrayList<User>> {
+                    override fun onResponse(
+                            call: Call<ArrayList<User>>,
+                            response: Response<ArrayList<User>>
+                    ) {
+                        if (response.isSuccessful) {
+                            listFollowers.postValue(response.body())
+                        }
                     }
-                }
 
-                override fun onFailure(call: Call<ArrayList<User>>, error: Throwable) {
-                    Log.d("Failure", error.message.toString())
-                }
-            })
+                    override fun onFailure(call: Call<ArrayList<User>>, error: Throwable) {
+                        Log.d("Failure", error.message.toString())
+                    }
+                })
     }
 
     fun getListFollowers(): LiveData<ArrayList<User>> = listFollowers
