@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pencari Akun GitHub</string>
+    <string name="search_user">Cari akun di sini ...</string>
+    <string name="greetings">Halo. Ingin mencari seseorang?</string>
+    <string name="empty_search">Harap masukkan username</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="repository">Projek</string>
+    <string name="toolbar_detail">Detail Pengguna</string>
+    <string name="toolbar_alarm">Pengingat</string>
+    <string name="alarm_message">Pengingat: Carilah orang yang selalu bisa jadi tempat kamu berbagi cerita :)</string>
+    <string name="alarm_on_text">Alarm dihidupkan!</string>
+    <string name="alarm_off_text">Alarm dimatikan.</string>
+    <string name="reminder">Pengingat pukul 09:00 WIB</string>
+    <string name="toolbar_favorite">Pengguna Favorit</string>
+    <string name="add_favorite">Ditambahkan ke Favorit!</string>
+    <string name="remove_favorite">Dihapus dari Favorit.</string>
+</resources>

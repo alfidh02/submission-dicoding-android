@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GitHub User Finder</string>
+    <string name="search_user">Search user here ...</string>
+    <string name="greetings">Hello. Want to search someone?</string>
+    <string name="empty_search">Please enter username</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="toolbar_detail">User Detail</string>
+    <string name="toolbar_alarm">Reminder</string>
+    <string name="alarm_message">Reminder: Always find someone to share story with :)</string>
+    <string name="alarm_on_text">Alarm turned on!</string>
+    <string name="alarm_off_text">Alarm turned off.</string>
+    <string name="reminder">Reminder at 09:00 A.M</string>
+    <string name="toolbar_favorite">Favorite User</string>
+    <string name="add_favorite">Added to Favorite!</string>
+    <string name="remove_favorite">Removed from Favorite.</string>
+</resources>

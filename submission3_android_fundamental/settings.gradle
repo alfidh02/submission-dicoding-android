@@ -1,0 +1,3 @@
+include ':consumerfavuser'
+include ':app'
+rootProject.name = "SubmissionDicodingGithub3"
